@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import tags
+from tags import html, head, title, meta, a, div, body
 
-lines = tags.html(
-    tags.head(
-        tags.title('hello'),
-        tags.meta(a=1, b=2),
+lines = html(
+    head(
+        title('hello'),
+        meta(a=1, b=2),
     ),
-    tags.body(
-        tags.a('baidu', href='http://www.baidu.com'),
-        tags.div('hahaha', tags.div('hehehe')),
+    body(
+        a('baidu', href='http://www.baidu.com'),
+        div('hahaha', div('hehehe')),
     ),
 )
 
